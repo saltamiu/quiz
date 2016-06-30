@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+h3{
+	font-family: Sans-serif;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+h3 {
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+}
+
+
+

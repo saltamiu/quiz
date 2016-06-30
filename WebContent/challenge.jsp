@@ -25,6 +25,7 @@
 	
 %>
 	<head>
+		<link rel="stylesheet" type="text/css" href="./css/challenge.css"/>
 		<title>Quiz Website</title>
 		<link rel="stylesheet" type="text/css" href="./css/styleHome.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/animate.css"/>
@@ -33,6 +34,7 @@
 		
 	</head>
 <body>
+	
 	<a href="creatQuiz.jsp"><img class = "quiz" src="./img/blaa.png" title="Create New Quiz"></a>
 			<hr>
 		<div class = "headerMenu" size = "60">
@@ -50,17 +52,25 @@
 		</div>
 		
 	<h3>								Challanges</h3>
-	<div id="notificationContainer"></div>
-	<div id="challengeContainer" style="display: none">
-			<%for(int i=0; i<challenges.length; i++){ %>
-			<div>
-				<input class="msgIDChallenge" type="hidden" value="<%=challenges[i].getId() %>">
-				<h3> From: <a href="<%=challenges[i].getSender().getURL()%>"><%=challenges[i].getSender().getFirstname() + " " +challenges[i].getSender().getLastname() %></a></h3>
-				Quiz: <a href="quizPage.jsp?quizID=<%=challenges[i].getQuizid() %>">get Quiz</a>
-				<h4 color=blue>Msg: <%=challenges[i].getMsg() %></h4>
-			</div>
-			<%} %>
-	</div>
+	<fieldset>
+		<div id="notificationContainer"></div>
+		<div id="challengeContainer" style="display: none">
+				<%if (challenges.length==0){ %>
+					<h3> There is no challenges . . .  You Are Alone...</h3>
+				<%} else{%>
+					<%for(int i=0; i<challenges.length; i++){ %>
+					<div>
+						<input class="msgIDChallenge" type="hidden" value="<%=challenges[i].getId() %>">
+						<h3> From: <a href="<%=challenges[i].getSender().getURL()%>"><%=challenges[i].getSender().getFirstname() + " " +challenges[i].getSender().getLastname() %></a></h3>
+						Quiz: <a href="quizPage.jsp?quizID=<%=challenges[i].getQuizid() %>">get Quiz</a>
+						<h4 color=blue>Msg: <%=challenges[i].getMsg() %></h4>
+					</div>
+					
+					<%} %>
+				<%}%>
+		</div>
+	</fieldset>
+	
 	
 	<div class="notifications">
 		<div style="display: inline-block">
@@ -73,8 +83,26 @@
 		<script type="text/javascript">
 			showChallenges();
 		</script> -->
-
+		
+	<input type="button" value="Go Back!" onclick="history.back(-1)" />
+	
+	
+	
 </body>
+<style>
+		#button {
+		    background-color: #ffff;
+		    -moz-border-radius: 5px;
+		    -webkit-border-radius: 5px;
+		    border-radius:6px;
+		    color: #fff;
+		    font-family: 'Oswald';
+		    font-size: 20px;
+		    text-decoration: none;
+		    cursor: pointer;
+		    border:none;
+		}
+</style>
 <%} %>
 <script type="text/javascript">
 function showChallenges(){

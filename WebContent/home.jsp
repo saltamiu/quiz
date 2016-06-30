@@ -83,7 +83,8 @@ else{
 				<h3 onclick="showMessages()">Messages  <%= messages.length %></h3>
 			</div>
 			<div style="display: inline-block">
-				<h3 onclick="showChallenges()">Challenges  <%= challenges.length %></h3>
+				<%-- <h3 onclick="showChallenges()">Challenges  <%= challenges.length %></h3> --%>
+				<h3><a href="challenge.jsp">Challenges  <%= challenges.length %> </a></h3>
 			</div>
 			<div style="display: inline-block">
 				<h3 onclick="showFriendRequests()">Friend Requests  <%= friendRequest.length %></h3>

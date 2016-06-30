@@ -4,10 +4,10 @@ import static org.junit.Assert.*;
 
 import java.util.*;
 
+import org.junit.Test;
+
 import model.Question;
 import model.Quiz;
-
-import org.junit.*;
 
 import Servlets.DBHelper;
 

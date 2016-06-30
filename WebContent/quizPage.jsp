@@ -17,12 +17,27 @@ if(user == null){
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 				<link rel="stylesheet" type="text/css" href="./css/Quiz.css"/>
-		
+		 <link rel="stylesheet" type="text/css" href="./css/HeaderSCC.css"/>
 <!-- 		<link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css"/>
  -->		<title><%=quiz.getQuizName() %></title>
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	</head>
 	<body>
+	<a href="creatQuiz.jsp"><img class = "quiz" src="./img/blaa.png" title="Create New Quiz"></a>
+			<hr>
+		<div class = "headerMenu" size = "60">
+			<div class = "search-box">
+
+				<form action="search" method = "GET" id = "search">
+					<input id="searchForm" type = "text" name="q" size="60" placeholder="Search ...">
+				</form>
+				<a href="https://instagram.com/"><img class = "link" src="./img/2.png"></a>
+				<p id = "bla" class="out"><a href="SignOutServlet">Sing Out</a></p>
+				<p id = "bla" class = "boloshi"><a href="home.jsp"><%=user.getFirstname() %> <%=user.getLastname() %></a></p>
+				<a href="home.jsp"><img class = "user" src="./img/user.jpg"></a>
+				
+			</div>
+		</div>
 		<h2>Name of Quiz: <%=quiz.getQuizName() %></h2>
 		<h3>Description: <%=quiz.getDescription() %></h3>
 		<h4>Creator: <a href="<%=quiz.getOwnes().getURL()%>"><%=quiz.getOwnes().getUsername() %></a></h4>

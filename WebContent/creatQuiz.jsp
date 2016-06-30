@@ -14,12 +14,16 @@ if(user == null){
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Create new Quiz</title>
-			<link rel="stylesheet" type="text/css" href="./css/Quiz.css"/>
-	
+			 <link rel="stylesheet" type="text/css" href="./css/Quiz.css"/>
+			 <link rel="stylesheet" type="text/css" href="./css/HeaderSCC.css"/>
+			 
+	<!-- <link rel="stylesheet" type="text/css" href="./css/styleHome.css"/> 
+ -->		 
 	<!-- <link rel="stylesheet" type="text/css" href="./css/styleHome.css"/> -->
 	<!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css"/> -->
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
+<body>
 <%-- <a href="creatQuiz.jsp"><img class = "quiz" src="./img/blaa.png" title="Create New Quiz"></a>
 			<hr>
 	
@@ -37,6 +41,25 @@ if(user == null){
 			</div>
 		</div>
 		 --%>
+		 
+		 
+		 
+<a href="creatQuiz.jsp"><img class = "quiz" src="./img/blaa.png" title="Create New Quiz"></a>
+			<hr>
+		<div class = "headerMenu" size = "60">
+			<div class = "search-box">
+
+				<form action="search" method = "GET" id = "search">
+					<input id="searchForm" type = "text" name="q" size="60" placeholder="Search ...">
+				</form>
+				<a href="https://instagram.com/"><img class = "link" src="./img/2.png"></a>
+				<p id = "bla" class="out"><a href="SignOutServlet">Sing Out</a></p>
+				<p id = "bla" class = "boloshi"><a href="home.jsp"><%=user.getFirstname() %> <%=user.getLastname() %></a></p>
+				<a href="home.jsp"><img class = "user" src="./img/user.jpg"></a>
+				
+			</div>
+		</div>
+		 
 <div id="questionTemplate" style="display: none">
 	<fieldset class="question">
 		<div class="questionType">
@@ -97,9 +120,13 @@ if(user == null){
 	</div>
 </div>
 
-<body>
+<!-- <body> -->
+
+
+
+
 <div>
-	Choose question category:<BR> 
+	
 	<fieldset>
 	<legend>Quiz</legend>
 		<p>Enter Quiz name <input class="form-control" type="text" id="quizName" style="width: 200px;"></p>
@@ -115,7 +142,7 @@ if(user == null){
 		<button class="btn btn-primary" id="addQuestion" onclick="addQuestion()">Add Question</button>
 	</fieldset>
 	<button class = "but" id="addQuiz">Add Quize</button>
-</body>
+ </body> 
 <script>
 var bla;
 $('#addQuiz').click(function(){

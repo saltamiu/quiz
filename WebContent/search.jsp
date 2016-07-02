@@ -24,7 +24,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/challenge.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/search.css"/>
-		<!-- <link rel="stylesheet" type="text/css" href="./css/transi.css"/> -->
+		<link rel="stylesheet" type="text/css" href="./css/transi.css"/> 
 		<title>Challenge</title>
 		<link rel="stylesheet" type="text/css" href="./css/styleHome.css"/>
 		<!-- <link rel="stylesheet" type="text/css" href="./css/animate.css"/> -->

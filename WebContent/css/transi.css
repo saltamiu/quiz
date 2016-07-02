@@ -1,13 +1,5 @@
 @CHARSET "ISO-8859-1";
 
-div {
-	transition: <property> <duration> <timing-function> <delay>;
-}
-
-div {
-	transition-property: opacity, left, top, height;
-	transition-duration: 3s, 5s, 3s, 5s;
-}
 
 #delay1 {
 	position: relative;
@@ -54,10 +46,6 @@ div {
 	box-shadow: 2px 2px 1px black;
 }
 
-p {
-	padding-left: 60px;
-}
-
 #foo {
 	border-radius: 50px;
 	width: 50px;
@@ -69,9 +57,7 @@ p {
 	transition: transform 1s;
 }
 
-p {
-	padding-left: 60px;
-}
+
 
 #foo {
 	border-radius: 50px;
@@ -82,18 +68,6 @@ p {
 	top: 0;
 	left: 0;
 	transition: transform 1s;
-}
-
-body {
-	font: bold 11px/1.5em Verdana;
-}
-
-h1 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
 }
 
 hr {
@@ -123,13 +97,6 @@ hr {
 	padding: 0;
 }
 
-#tabs a {
-	float: left;
-	background: url("tableft.gif") no-repeat left top;
-	margin: 0;
-	padding: 0 0 0 4px;
-	text-decoration: none;
-}
 
 #tabs a span {
 	float: left;
@@ -168,14 +135,6 @@ hr {
 	margin-top: 55px;
 }
 
-a, a:hover {
-	text-decoration: none;
-}
-
-p {
-	line-height: 30px;
-	margin-bottom: 23px;
-}
 
 .img-margin-product {
 	margin-top: 30px;
@@ -757,15 +716,6 @@ p {
 	background-image: url(../images/5.jpg);
 }
 
-/* Animations for content elements */
-.sl-trans-elems .deco {
-	-webkit-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
-	-moz-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
-	-o-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
-	-ms-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
-	animation: roll 1s ease-out both, fadeIn 1s ease-out both;
-}
-
 .sl-trans-elems h2 {
 	-webkit-animation: moveUp 1s ease-in-out both;
 	-moz-animation: moveUp 1s ease-in-out both;
@@ -976,20 +926,12 @@ p {
 	-ms-transform: rotate(0deg)
 }
 
-100%{
 -ms-transform
 :rotate(359deg)
 }
-}
-@
+
 keyframes spin { 0%{
 	transform: rotate(0deg)
-}
-
-100%{
-transform
-:rotate(359deg)
-}
 }
 
 .fa-flip-horizontal {

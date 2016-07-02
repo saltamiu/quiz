@@ -24,10 +24,11 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/challenge.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/search.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="./css/transi.css"/> -->
 		<title>Challenge</title>
 		<link rel="stylesheet" type="text/css" href="./css/styleHome.css"/>
 		<!-- <link rel="stylesheet" type="text/css" href="./css/animate.css"/> -->
-<!-- 		<link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css"/>
+<!-- 		<link rel="stylesheet" type="text/css" href="./css/css/bootstrap.min.css"/>
  -->		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		
 	</head>

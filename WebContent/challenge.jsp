@@ -26,9 +26,9 @@
 %>
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/challenge.css"/>
-		<title>Quiz Website</title>
+		<title>Challenge</title>
 		<link rel="stylesheet" type="text/css" href="./css/styleHome.css"/>
-		<link rel="stylesheet" type="text/css" href="./css/animate.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="./css/animate.css"/> -->
 <!-- 		<link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css"/>
  -->		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		
@@ -50,13 +50,24 @@
 				
 			</div>
 		</div>
-		
-	<h3>								Challanges</h3>
+	<div class="notifications">
+		<div style="display: inline-block">	
+			<h3>Challenges</h3>
+			</div>
+			</div>
 	<fieldset>
 		<div id="notificationContainer"></div>
 		<div id="challengeContainer" style="display: none">
 				<%if (challenges.length==0){ %>
-					<h3> There is no challenges . . .  You Are Alone...</h3>
+				<div style="display: inline-block">	
+					<h3>                    There is no challenges . . .</h3>
+				</div>
+					<br>
+					<br>
+					<br>
+					<img  class = "animated-gif" src="./img/dance.gif">
+					
+					<img>
 				<%} else{%>
 					<%for(int i=0; i<challenges.length; i++){ %>
 					<div>
@@ -67,14 +78,18 @@
 					</div>
 					
 					<%} %>
+					<img  class = "an" src="./img/badminton.gif">
 				<%}%>
+				
+				
+				
 		</div>
 	</fieldset>
 	
 	
 	<div class="notifications">
 		<div style="display: inline-block">
-				<h3 onclick="showChallenges()">Challenges  <%= challenges.length %></h3>
+				<%-- <h3 onclick="showChallenges()">Challenges  <%= challenges.length %></h3> --%>
 			</div>
 	</div>
 	
@@ -83,11 +98,11 @@
 		<script type="text/javascript">
 			showChallenges();
 		</script> -->
+	
 		
 	<input type="button" value="Go Back!" onclick="history.back(-1)" />
 	
-	
-	
+ 	
 </body>
 <style>
 		#button {
@@ -121,5 +136,6 @@ function showChallenges(){
 	}); 
 	$("#notificationContainer").html($("#challengeContainer").html());
 }
+showChallenges();
 </script>
 </html>

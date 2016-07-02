@@ -55,8 +55,8 @@ hr{
 	margin-top: 10px;
 }
 .link{
-	position: fixed;
-	top:17px;
+	position: absolute;
+	top:0px;
 	margin-left: 660px;
 }
 a{
@@ -67,18 +67,20 @@ a{
 	color: red;
 }
 p{
-	position: fixed;
-	font-size: 20px;
-	top:15px;
+ 	position: absolute;
+	top:-15px;
 	margin-left: 800px;
+	font-size: 20px;
 }
 .out{
-	position: fixed;
+	position: inherit;
 	margin-left: 960px;
+	font-size: 20px;
+	top:-26px;
 }
 .user{
-	position: fixed;
-	top:1px;
+	position: absolute;
+	top:-16px;
 	width: 65px;
 	height: 65px;
 	margin-left: 1050px;
@@ -112,9 +114,9 @@ p{
 }
 
 fieldset{
-	color: red;
-	border:2px dotted;
-	font-family:"Courier New",Courier
+	color: black;
+/* 	border:5px dotted;
+ */	font-family:"Courier New",Courier
 }
 
 .Quizes{

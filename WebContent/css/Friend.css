@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+@CHARSET "ISO-8859-1";
+
+h3{
+	font-family: Sans-serif;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+h3 {
+    -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+
+img.animated-gif{
+  width: 500px;
+  height: auto;
+}
+
+img.an{
+	width:1000px;
+	heigh:auto;
+}
+
+
+#button {
+		    background-color: #ffff;
+		    -moz-border-radius: 5px;
+		    -webkit-border-radius: 5px;
+		    border-radius:6px;
+		    color: #fff;
+		    font-family: 'Oswald';
+		    font-size: 20px;
+		    text-decoration: none;
+		    cursor: pointer;
+		    border:none;
+		}
+
+img.animated bounce{
+	width:500px;
+}

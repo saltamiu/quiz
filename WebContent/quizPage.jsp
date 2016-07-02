@@ -38,9 +38,12 @@ if(user == null){
 				
 			</div>
 		</div>
+		<div style="width: 100%">
+    		<img style="float:right;" class = "animated bounce" src="./img/minuka.jpg">
 		<h2>Name of Quiz: <%=quiz.getQuizName() %></h2>
 		<h3>Description: <%=quiz.getDescription() %></h3>
 		<h4>Creator: <a href="<%=quiz.getOwnes().getURL()%>"><%=quiz.getOwnes().getUsername() %></a></h4>
+		</div>
 		<%
 			for(int i=0; i<quiz.getQuestions().size(); i++){
 				%>

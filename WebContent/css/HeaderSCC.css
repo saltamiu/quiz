@@ -2,15 +2,15 @@
 
 .boloshi{
 	margit-left:1000px !important;
-		position: fixed;
+		position: relative;
 	margin-left: 800px;
 	font-size: 20px;
-	top:15px;
+	top:-57px;
 }
 
 .link{
-	position: fixed;
-	top:17px;
+	position: absolute;
+	top:0px;
 	margin-left: 660px;
 }
 .quiz{
@@ -26,15 +26,15 @@
 	margin-right: 245px;
 }
 .out{
-	position: fixed;
+	position: inherit;
 	margin-left: 960px;
 	font-size: 20px;
-	top:15px;
+	top:-26px;
 }
 
 .user{
-	position: fixed;
-	top:1px;
+	position: absolute;
+	top:-16px;
 	width: 65px;
 	height: 65px;
 	margin-left: 1050px;

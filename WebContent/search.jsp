@@ -23,6 +23,7 @@
 %>
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/challenge.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/search.css"/>
 		<title>Challenge</title>
 		<link rel="stylesheet" type="text/css" href="./css/styleHome.css"/>
 		<!-- <link rel="stylesheet" type="text/css" href="./css/animate.css"/> -->
@@ -48,15 +49,16 @@
 		</div>
 
 	<fieldSet>
-	
+		<div style="width: 100%">
+    		<img style="float:right;" class = "animated bounce" src="./img/search1.gif">
 		<legend>Result:</legend>
-		<h1>Find User</h1>
 
 		<%
 			User[] users = (User[]) request.getAttribute("users");
 			if (users.length == 0) {
 		%>
-		<h6>there is no User</h6>
+		<h4>there is no User</h4>
+		<img class = "animat" src="./img/noSearch.gif">
 		<%
 			}
 			for (int i = 0; i < users.length; i++) {
@@ -70,8 +72,13 @@
 			}
 		%>
 		<h5>
-			<a href="home.jsp">RETURN HOMEPAGE:</a>
+		<br>
+		<br>
+		<br>
+		<br>
+			<a href="home.jsp">RETURN HOMEPAGE</a>
 		</h5>
+		</div>
 	</fieldSet>
 
 </body>

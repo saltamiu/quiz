@@ -12,7 +12,7 @@ public class DBConnection {
 
 	   //  Database credentials
 	   static final String USER = "root";
-	   static final String PASS = "anastasia";
+	   static final String PASS = "39814500";
 	
 	public static Connection initConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Connection thisCon = null;

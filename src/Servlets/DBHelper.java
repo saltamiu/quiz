@@ -15,6 +15,7 @@ import java.util.List;
 
 
 
+
 import model.Challenge;
 import model.FillTheGapsQuestion;
 import model.FriendRequest;
@@ -24,6 +25,7 @@ import model.MultipleChoiceQuestion;
 import model.PictureQuizQuestion;
 import model.QuestinAnswerQuestion;
 import model.Question;
+import model.UserHistoryItem;
 import model.Question.QuestionType;
 import model.Quiz.QuizHandle;
 import model.Quiz;
@@ -1050,6 +1052,36 @@ public class DBHelper {
 			e.printStackTrace();
 		}
 		return q;
+	}
+	
+	public static ArrayList<UserHistoryItem> getUserHistory(int userId){
+		ArrayList<UserHistoryItem> retVal = new ArrayList<UserHistoryItem>();
+		Connection con = null;
+		try {
+			con = DBConnection.initConnection();
+			CallableStatement stm = con.prepareCall("{call getUserHistory(?)}");
+			stm.setInt(1, userId);
+			
+			ResultSet res = stm.executeQuery();
+			while(res.next()){
+				UserHistoryItem item = new UserHistoryItem();
+				Quiz q = new Quiz(res.getInt(0), res.getString(1),res.getDate(2));
+				
+				item.setQuiz(q);
+				item.setScore(res.getInt("score"));
+				retVal.add(item);
+			}
+		} catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return retVal;
 	}
 
 	public static ArrayList<HistoryItem> getHistory(int quizID){

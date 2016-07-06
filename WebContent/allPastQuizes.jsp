@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="model.Quiz.QuizHandle"%>
 <%@ page import="model.*"%>
 <%@ page import="Servlets.*"%>
@@ -11,27 +12,16 @@
 	if (user == null)
 		response.sendRedirect("index.html");
 	else {
-		String username = request.getParameter("username");
-		User other = DBHelper.findUser(username);
 %>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title><%=other == null ? "User" : other.getUsername()%></title>
+<title>"User" : user.getUsername()%></title>
 <link rel="stylesheet" type="text/css" href="./css/styleHome.css" />
 <link rel="stylesheet" type="text/css" href="./css/animate.css" />
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-	<%
-		if (other == null) {
-	%>
-	<h1>
-		No Such User: '<%=username%>'
-	</h1>
-	<%
-		} else {
-	%>
 	<a href="creatQuiz.jsp"><img class="quiz" src="./img/blaa.png"
 		title="Create New Quiz"></a>
 	<hr>
@@ -58,7 +48,15 @@
 			</p>
 			<a href="home.jsp"><img class="user" src="./img/user.jpg"></a>
 
-
+			<%
+				ArrayList<UserHistoryItem> userHistory = DBHelper.getUserHistory(user.getUserID());
+				for(UserHistoryItem item: userHistory){
+			%>
+				
+			<%
+				}
+			%>
+			
 		</div>
 	</div>
 	
@@ -66,7 +64,6 @@
 </body>
 
 <%
-	}
 	}
 %>
 

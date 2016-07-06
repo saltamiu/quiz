@@ -12,9 +12,11 @@ import java.util.List;
 
 
 
+
 import model.Challenge;
 import model.FillTheGapsQuestion;
 import model.FriendRequest;
+import model.HistoryItem;
 import model.Message;
 import model.MultipleChoiceQuestion;
 import model.PictureQuizQuestion;
@@ -1034,6 +1036,39 @@ public class DBHelper {
 			e.printStackTrace();
 		}
 		return q;
+	}
+
+	public static ArrayList<HistoryItem> getHistory(int quizID){
+		ArrayList<HistoryItem> retVal = new ArrayList<HistoryItem>();
+		Connection con = null;
+		try {
+			con = DBConnection.initConnection();
+			CallableStatement stm = con.prepareCall("{call getUsersFor(?)}");
+			stm.setInt(1, quizID);
+			
+			ResultSet res = stm.executeQuery();
+			while(res.next()){
+				HistoryItem hi = new HistoryItem();
+				User usr = new User();
+				usr.setFirstname(res.getString("first_name"));
+				usr.setLastname(res.getString("last_name"));
+				usr.setUsername(res.getString("username"));
+				usr.setUserID(res.getInt(6));
+				hi.setUser(usr);
+				hi.setScore(res.getInt("score"));
+				retVal.add(hi);
+			}
+		} catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return retVal;
 	}
 }
 

@@ -47,19 +47,31 @@
 				<a href="home.jsp"><%=user.getFirstname()%> <%=user.getLastname()%></a>
 			</p>
 			<a href="home.jsp"><img class="user" src="./img/user.jpg"></a>
-
+			<table>
+			<tbody>
 			<%
 				ArrayList<UserHistoryItem> userHistory = DBHelper.getUserHistory(user.getUserID());
 				for(UserHistoryItem item: userHistory){
 			%>
-				
+				<tr>
+				<td>
 			<%
+				item.getQuiz().getQuizName();
+			%>
+				</td>
+				<td>
+			<%
+				item.getScore();
+			%>
+				</td>
+				</tr>
+			<%	
 				}
 			%>
-			
+			</tbody>
+			</table>
 		</div>
 	</div>
-	
 	
 </body>
 

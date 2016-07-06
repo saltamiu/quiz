@@ -42,7 +42,7 @@ else{
 					<input id="searchForm" type = "text" name="q" size="60" placeholder="Search ...">
 				</form>
 				<a href="https://instagram.com/"><img class = "link" src="./img/2.png"></a>
-				<p class="out"><a href="SignOutServlet">Sing Out</a></p>
+				<p class="out"><a href="SignOutServlet">Sign Out</a></p>
 				<p class = "boloshi"><a href="home.jsp"><%=user.getFirstname() %> <%=user.getLastname() %></a></p>
 				<a href="home.jsp"><img class = "user" src="./img/user.jpg"></a>
 				

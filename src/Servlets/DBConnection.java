@@ -12,7 +12,7 @@ public class DBConnection {
 	 //  "jdbc:mysql:///dbname?useUnicode=true&characterEncoding=utf-8"
 	   //  Database credentials
 	   static final String USER = "root";
-	   static final String PASS = "39814500";
+	   static final String PASS = "anastasia";
 	
 	public static Connection initConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Connection thisCon = null;

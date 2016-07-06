@@ -53,7 +53,7 @@
 			<a onclick="$('#search').submit()"><img class="link"
 				src="./img/2.png"></a>
 			<p class="out">
-				<a href="SignOutServlet">Sing Out</a>
+				<a href="SignOutServlet">Sign Out</a>
 			</p>
 			<p>
 				<a href="home.jsp"><%=user.getFirstname()%> <%=user.getLastname()%></a>

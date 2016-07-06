@@ -43,6 +43,9 @@ public class User {
 		this.friends = friends;
 	}
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getUserID() {
 		return userID;
 	}

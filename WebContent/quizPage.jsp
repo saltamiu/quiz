@@ -32,7 +32,7 @@ if(user == null){
 					<input id="searchForm" type = "text" name="q" size="60" placeholder="Search ...">
 				</form>
 				<a href="https://instagram.com/"><img class = "link" src="./img/2.png"></a>
-				<p id = "bla" class="out"><a href="SignOutServlet">Sing Out</a></p>
+				<p id = "bla" class="out"><a href="SignOutServlet">Sign Out</a></p>
 				<p id = "bla" class = "boloshi"><a href="home.jsp"><%=user.getFirstname() %> <%=user.getLastname() %></a></p>
 				<a href="home.jsp"><img class = "user" src="./img/user.jpg"></a>
 				

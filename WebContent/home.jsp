@@ -116,6 +116,8 @@ else{
 				<div><a href="quizPage.jsp?quizID=<%=userPlayedQuizes[i].getID() %>"><%=userPlayedQuizes[i].getQuizName() %></a></div>
 			<%} %>
 			
+				<a href="allPastQuizes.jsp?userID=<%=user.getUserID() %>">show all</a>
+			
 			</fieldset>
 			<fieldset style="display:inline-block">
 			<legend>Friends:</legend>

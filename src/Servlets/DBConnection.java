@@ -8,8 +8,8 @@ import java.sql.Statement;
 
 public class DBConnection {
 	 static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	   static final String DB_URL = "jdbc:mysql://localhost:3306/quiz";
-
+	   static final String DB_URL = "jdbc:mysql://localhost:3306/quiz?useUnicode=true&characterEncoding=utf-8";
+	 //  "jdbc:mysql:///dbname?useUnicode=true&characterEncoding=utf-8"
 	   //  Database credentials
 	   static final String USER = "root";
 	   static final String PASS = "39814500";

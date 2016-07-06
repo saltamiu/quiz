@@ -131,7 +131,7 @@ if(user == null){
 	<div style="width: 100%">
     		<img style="float:right;" class = "animated bounce" src="./img/kiss.gif">
 	<legend>Quiz</legend>
-		<p>Enter Quiz name <input class="form-control" type="text" id="quizName" style="width: 200px;"></p>
+		<p>Enter Quiz name  <input class="form-control" type="text" id="quizName" style="width: 200px;"></p>
 		<p>Enter Quiz description <textarea class="form-control" id="quizDescription" style="width: 200px;"></textarea></p>
 		<!-- <p><input type="checkbox" id="quizRandom"/>Random</p>
 		<p><input type="checkbox" id="quizFeedback"/>Feedback</p>

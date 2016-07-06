@@ -16,7 +16,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>"User" : user.getUsername()%></title>
+<title>"User" : <% user.getUsername();%></title>
 <link rel="stylesheet" type="text/css" href="./css/styleHome.css" />
 <link rel="stylesheet" type="text/css" href="./css/animate.css" />
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

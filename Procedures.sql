@@ -16,7 +16,7 @@ begin
 	select * from take_quize
     join users on take_quize.userID = users.ID
     where quizID = quiz_id 
-    order by score desc, (take_tike - end_time) desc;
+    order by score desc, take_tike desc;
 end@
 
 delimiter @
@@ -26,7 +26,7 @@ begin
 	select * from take_quize
     join users on take_quize.userID = users.ID
     where users.ID = userId 
-    order by score desc, (take_tike - end_time) desc;
+    order by score desc, take_tike desc;
 end@
 
 drop procedure if exists getUser@

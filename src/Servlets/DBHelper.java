@@ -1,5 +1,7 @@
 package Servlets;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date;
@@ -26,6 +28,7 @@ import model.Question.QuestionType;
 import model.Quiz.QuizHandle;
 import model.Quiz;
 import model.User;
+import model.testutf;
 
 public class DBHelper {
 	public static User addUser(String name, String lastname, String username,
@@ -825,6 +828,17 @@ public class DBHelper {
 		User owner = quiz.getOwnes();
 		ArrayList<Question> questions = quiz.getQuestions();
 		String name = quiz.getQuizName();
+		try {
+			System.out.println(name.getBytes("UTF-8").toString());
+			byte[] b = "Üü?öäABC".getBytes("ISO-8859-15");
+			testutf k = new testutf();
+			System.out.println(k.deAccent(name));
+			System.out.println(new String(b, "ISO-8859-15")); // will be ok
+			System.out.println(new String(b, "UTF-8")); // will
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		Connection con;
 		try {
 			con = DBConnection.initConnection();
